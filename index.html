@@ -1,10 +1,195 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			@font-face {
+				font-family: 'iconfont';
+				/* project id 371988 */
+				src: url('//at.alicdn.com/t/font_axm1gvvgcgs6ecdi.eot');
+				src: url('//at.alicdn.com/t/font_axm1gvvgcgs6ecdi.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_axm1gvvgcgs6ecdi.woff') format('woff'), url('//at.alicdn.com/t/font_axm1gvvgcgs6ecdi.ttf') format('truetype'), url('//at.alicdn.com/t/font_axm1gvvgcgs6ecdi.svg#iconfont') format('svg');
+			}
+		</style>
 	</head>
+
 	<body>
-		
+		<!--<p class="iconfont">&#xe662;</p>-->
+		<!--顶部可关闭广告-->
+		<div class="top_add">
+			<div class="top_addbox">
+				<a href="http://www.supumall.com/Active/170719-zy-jiajuriyong-pc" target="_blank"><img src="img/index_top_170724pinzhishenghuo.jpg" /></a>
+				<div class="top_close"></div>
+			</div>
+		</div>
+		<div class="r_nav">
+			<ul>
+				<li class="iconfont">
+					<a href="javascript:;">
+						<div class="i_font">&#xe659;</div><span>&nbsp;&nbsp;我的速普&nbsp;&nbsp;</span></a>
+				</li>
+				<li class="iconfont">
+					<a href="javascript:;">
+						<div class="i_font">&#xe643;</div><span>&nbsp;&nbsp;我的收藏&nbsp;&nbsp;</span></a>
+				</li>
+				<li class="iconfont">
+					<a href="javascript:;">
+						<div class="i_font">&#xe662;</div><span>&nbsp;&nbsp;在线客服&nbsp;&nbsp;</span></a>
+				</li>
+				<li class="iconfont">
+					<a href="javascript:;">
+						<div class="i_font">&#xe63f;</div><span>&nbsp;&nbsp;购物车&nbsp;&nbsp;</span></a>
+					<div class="sum">0</div>
+				</li>
+				<!--回到底部-->
+				<li class="iconfont">
+					<a href="javascript:;">
+						<div class="i_font">&#xe65d;</div><span>&nbsp;&nbsp;返回顶部&nbsp;&nbsp;</span></a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			//广告与侧边栏
+			$(document).ready(function() {
+				$('.top_close').click(function() {
+					$('.top_addbox').fadeToggle("slow");
+				});
+				$(window).scroll(function() {
+					if($(window).scrollTop() > 50) {
+						$(".top_add").css("position", "fixed");
+					}
+					if($(window).scrollTop() < 50) {
+						$(".top_add").css("position", "relative");
+					}
+				})
+			});
+			$(".iconfont").hover(function() {
+				$(this).css({
+					"display": "block",
+					"background-color": "#9381f4",
+					"color": "#FFFFFF",
+					"text-decoration": "none"
+				}).children("a").children("span").stop().animate({
+					"left": -$(this).children("a").children("span").width() + "px"
+				}, 300);
+			}, function() {
+				$(this).css({
+					"background-color": "#e5004b",
+					"color": "#FFFFFF"
+				}).children("a").children("span").stop().animate({
+					"left": $(this).width() + "px"
+				}, 100);
+			})
+		</script>
+
+		<div id="header">
+			<div class="status_bar clear">
+				<div class="sign_up_in fl">欢迎来到速普商城！ 请 [
+					<a href="" class="sign_up">登录</a>] [
+					<a href="" class="sign_in">免费注册</a>]<br class="clear" /></div>
+				<div class="info fl">
+					<ul>
+						<li class="f_l fl">
+							<a href="script:;">消费者告知书</a>
+						</li>
+						<li class="f_l fl">
+							<a href="script:;">我的订单</a>
+						</li>
+						<li class="f_l fl">我的速普<span>▼</span>
+							<ul>
+								<li>
+									<a href="script:;">我的优惠券</a>
+								</li>
+								<li>
+									<a href="script:;">我的收藏</a>
+								</li>
+								<li>
+									<a href="script:;">我的积分</a>
+								</li>
+								<li>
+									<a href="script:;">现金账户</a>
+								</li>
+								<li>
+									<a href="script:;">待评价</a>
+								</li>
+							</ul>
+						</li>
+						<li class="f_l fl">手机端<span>▼</span>
+							<ul>
+								<li><img src="img/app.jpg" alt="" /></li>
+								<li><img src="img/weixin.jpg" alt="" /></li>
+							</ul>
+						</li>
+						<li class="f_l fl">
+							<a href="script:;">网站导航</a>
+						</li>
+						<li class="f_l fl">400-618-0055<span>▼</span>
+							<ul>
+								<li>
+									<a href="script:;">帮助中心</a>
+								</li>
+								<li>
+									<a href="script:;">400-618-0055</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bar clear">
+				<div class="barbox">
+		            <div class="logobox fl">
+		                <a href="/">
+		                    <img class="logo" src="img/logo.jpg"/>
+		                </a>
+		            </div>
+		            <div class="searchbox fl">
+		                <form method="get" name="searchform" id="searchform" class="searchinfo">
+		                    <div class="searchicon fl"><img src="img/search.png"/></div>
+		                    <input name="keywords" type="text" id="searchtext" value="" class="fl" autocomplete="off" />
+		                    <div class="listbox"></div>
+		                    <input name="searchbtn" type="submit" id="searchbtn" value="搜索" />
+		                </form>
+		                <div class="hotsearch">
+		                    <ul>
+		                        <li>热门搜索：</li>
+		                    </ul>
+		                    <div class="clear"></div>
+		                </div>
+		            </div>
+		            <div class="smallbox fl">
+		                <a href="#" target="_blank" class="small">
+		                	<i class="iconfont fl size">&#xe63f;</i>
+		                	<span class="fl">购物车</span>
+		                	<i class="mallnum_left fl"></i>
+		                	<em class="smallnum fl">0</em>
+		                    <div class="clear"></div>
+		                </a>
+		            </div>
+		        </div>
+			</div>
+			<div class="nav"></div>
+		</div>
+		<script type="text/javascript">
+			$(".f_l").hover(function() {
+				$(this).children("span").text("∨").css("color","orange");
+				if ($(this).width() > $(this).children("ul").width()) {
+					$(this).children("ul").css("width",$(this).width());
+				}
+				$(this).children("ul").css({
+					"left": $(this).width() / 2 + "px",
+					"margin-left": -$(this).children("ul").width() / 2 + "px"
+				}).show();
+				//console.log(($(this).width()/2),$(this).children("ul").width() / 2);
+			}, function() {
+				$(this).children("span").text("▼").css("color","#dbdbdb");
+				$(this).children("ul").hide();
+			})
+		</script>
 	</body>
+
 </html>
